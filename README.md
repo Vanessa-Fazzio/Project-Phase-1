@@ -32,18 +32,18 @@ GitHub: [@Vanessa-Fazzio](https://github.com/Vanessa-Fazzio)
 ## Live Site
 
 [View on GitHub Pages](https://vanessa-Fazzio.github.io/flight-data-viewer/)  
-*(If you have not deployed to GitHub Pages yet, you can do so by enabling GitHub Pages in your repository settings.)*
+
 
 ## Screenshots
 
-_Add a screenshot here if you wish:_
+
 
 ![Landing Page Screenshot](screenshot.png)
 
 ## Copyright & License
 
-&copy; 2025 Vanessa  
-This project is licensed under the [MIT License](LICENSE).
+&copy; 2025 Vanessa Fazzio
+
 
 ---
 
