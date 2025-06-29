@@ -1,0 +1,305 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #87ceeb;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: rgba(255,255,255,0.97);
+  padding: 32px 24px 24px 24px;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18), 0 0 0 6px #00c3e3 inset;
+  border: 2px solid #00c3e3;
+}
+
+.aircraft-img {
+  display: block;
+  margin: 0 auto 20px auto;
+  max-width: 120px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 18px;
+  color: #0074d9;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+  gap: 10px;
+}
+
+#refresh-btn {
+  background: linear-gradient(90deg, #0074d9 60%, #00c3e3 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  transition: background 0.2s, transform 0.1s;
+}
+#refresh-btn:hover {
+  background: linear-gradient(90deg, #ff6a00 60%, #ffd800 100%);
+  color: #fff;
+  transform: translateY(-3px) scale(1.07) rotate(-2deg);
+  box-shadow: 0 6px 24px rgba(255,106,0,0.18);
+  border: 1.5px solid #ff6a00;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+  gap: 10px;
+}
+
+#search-input {
+  padding: 12px 16px;
+  border: 1px solid #b2d8f7;
+  border-radius: 8px;
+  font-size: 17px;
+  width: 320px;
+  transition: border 0.2s;
+}
+
+#search-input:focus {
+  border: 1.5px solid #0074d9;
+  outline: none;
+}
+
+button[type="submit"] {
+  padding: 12px 22px;
+  font-size: 17px;
+  background: linear-gradient(90deg, #0074d9 60%, #00c3e3 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  transition: background 0.2s, transform 0.1s;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(90deg, #ff6a00 60%, #ffd800 100%);
+  color: #fff;
+  transform: translateY(-3px) scale(1.07) rotate(-2deg);
+  box-shadow: 0 6px 24px rgba(255,106,0,0.18);
+  border: 1.5px solid #ff6a00;
+}
+
+#flightsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.flight {
+  border: 2px solid #e3f1fb;
+  padding: 18px 22px;
+  border-radius: 14px;
+  background: linear-gradient(90deg, #fafdff 80%, #e0f7fa 100%);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: box-shadow 0.2s, border 0.2s, background 0.2s;
+  position: relative;
+  margin-bottom: 6px;
+  border-left: 8px solid #00c3e3;
+}
+
+.flight:hover {
+  box-shadow: 0 6px 24px rgba(0,116,217,0.10);
+  border: 1.5px solid #90d2f7;
+  background: #f0faff;
+}
+
+.flight.liked {
+  border: 2px solid #ff9800;
+  background: linear-gradient(90deg, #fffbe6 80%, #ffe066 100%);
+  border-left: 8px solid #ff9800;
+}
+
+.flight strong {
+  color: #0074d9;
+}
+
+.image-row {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.image-row img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 2px solid #00c3e3;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,116,217,0.10);
+  transition: transform 0.2s, border 0.2s;
+}
+.image-row img:hover {
+  transform: scale(1.15) rotate(-5deg);
+  border: 2.5px solid #ff6a00;
+  box-shadow: 0 4px 16px rgba(255,106,0,0.15);
+}
+
+.like-btn {
+  margin-top: 10px;
+  margin-right: 10px;
+  background: linear-gradient(90deg, #ff6a00 60%, #ffd800 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 7px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(255,106,0,0.10);
+}
+
+.like-btn.liked {
+  background: linear-gradient(90deg, #ff9800 60%, #ffe066 100%);
+  color: #fff;
+  animation: pop 0.25s;
+}
+
+@keyframes pop {
+  0% { transform: scale(1);}
+  50% { transform: scale(1.18);}
+  100% { transform: scale(1);}
+}
+
+.like-btn:hover {
+  background: linear-gradient(90deg, #e65c00 60%, #e6c200 100%);
+  transform: scale(1.07);
+}
+
+[id^="like-count-"] {
+  color: #ff6a00;
+  font-weight: bold;
+  margin-left: 2px;
+  font-size: 15px;
+}
+
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #0074d9;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  animation: spin 1s linear infinite;
+  margin: 30px auto;
+  display: block;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+
+.landing-header {
+  text-align: center;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e3f1fb;
+  background: linear-gradient(90deg, #e0f7fa 0%, #fafdff 100%);
+  border-radius: 18px 18px 0 0;
+  box-shadow: 0 2px 8px rgba(0,195,227,0.06);
+}
+
+.subtitle {
+  color: #0074d9;
+  font-size: 1.1em;
+  margin: 10px 0 0 0;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.api-error {
+  color: #d32f2f;
+  background: #fff0f0;
+  border: 1.5px solid #ffbdbd;
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin: 20px auto;
+  max-width: 400px;
+  text-align: center;
+  font-size: 1.08em;
+  box-shadow: 0 2px 8px rgba(211,47,47,0.08);
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 8px;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    max-width: 100vw;
+  }
+  .aircraft-img {
+    max-width: 90vw;
+    margin-bottom: 10px;
+  }
+  .image-row {
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  .image-row img {
+    width: 32px;
+    height: 32px;
+  }
+  h1 {
+    font-size: 1.3em;
+    margin-bottom: 12px;
+  }
+  .search-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+  #search-input {
+    width: 100%;
+    font-size: 1em;
+    padding: 10px 8px;
+  }
+  button,
+  #refresh-btn,
+  button[type="submit"] {
+    width: 100%;
+    font-size: 1em;
+    padding: 10px 0;
+  }
+  #flightsContainer {
+    gap: 10px;
+  }
+  .flight {
+    padding: 12px 8px;
+    font-size: 0.98em;
+    border-radius: 8px;
+  }
+  .landing-header {
+    border-radius: 0;
+    padding-bottom: 6px;
+  }
+  .subtitle {
+    font-size: 1em;
+    margin: 8px 0 0 0;
+  }
+}

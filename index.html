@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flight Data Viewer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/69/69906.png" />
+</head>
+<body>
+  <div class="container">
+    <img src="https://images.pexels.com/photos/46148/aircraft-jet-landing-cloud-46148.jpeg" alt="Aircraft" class="aircraft-img">
+    <div class="image-row">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqewYWLwIygHyeU_0XW2LQPOtq6WITe-7nlw&s">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCa9F94PjBddEDjcz4WG059vovK_KXyIaTCQ&s">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtSyamFpPrblm3YaXSrmo6RcTmdDdYJSvKOA&s">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj_V6kDiMqX0zhguqbTKOk2CWraV4DNPUcSw&s">
+    </div>
+    <h1>Flight Data Viewer</h1>
+    <div class="controls">
+      <button id="refresh-btn" title="Refresh Flights">🔄 Refresh</button>
+    </div>
+    <form id="search-form" class="search-container">
+      <input type="text" id="search-input" placeholder="Search by country" autocomplete="off" />
+      <button type="submit">Search</button>
+    </form>
+    <div id="flightsContainer"></div>
+    <div id="spinner" class="spinner" style="display:none;"></div>
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>

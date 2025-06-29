@@ -1,0 +1,26 @@
+{
+  "flights": [
+    {
+      "id": "abc123",
+      "icao24": "abc123",
+      "callsign": "BAW123",
+      "originCountry": "United Kingdom",
+      "longitude": -0.4543,
+      "latitude": 51.4700,
+      "dep": "LHR",
+      "arr": "JFK",
+      "likes": 0
+    },
+    {
+      "id": "def456",
+      "icao24": "def456",
+      "callsign": "AFR456",
+      "originCountry": "France",
+      "longitude": 2.55,
+      "latitude": 49.0097,
+      "dep": "CDG",
+      "arr": "LHR",
+      "likes": 0
+    }
+  ]
+}
